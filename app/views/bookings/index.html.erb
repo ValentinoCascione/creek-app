@@ -1,4 +1,9 @@
+<h1>Book a creek</h1>
+
 <% @bookings.each do |mybook| %>
     <p><%= mybook.creek.title %></p>
+    <p><%= mybook.creek.country %></p>
+    <p><%= mybook.creek.city %></p>
+    <p><%= mybook.creek.price %>€/day</p>
     <%= link_to "Delete this book", booking_path(mybook), method: :delete %>
 <% end %>

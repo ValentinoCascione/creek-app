@@ -1,9 +1,30 @@
-<h1>My new hosting creek</h1>
-
-<%= form_for [@creek] do |f| %>
-    <%= f.text_field :title %>
-    <%= f.text_field :country %>
-    <%= f.text_field :city %>
-    <%= f.file_field :image, direct_upload: true, class: "form-control" %>
-    <%= f.submit %>
-<% end %>
+<h1>New hosting creek</h1>
+<div>
+    <%= form_for [@creek] do |f| %>
+        <%= f.label :title %>
+        <%= f.text_field :title,  placeholder: "Title" %>
+        <br>
+        <%= f.label :country %>
+        <%= f.text_field :country,  placeholder: "Country" %>
+        <br>
+        <%= f.label :city %>
+        <%= f.text_field :city,  placeholder: "City" %>
+        <br>
+        <%= f.label :Available? %>
+        <%= f.check_box :available,  placeholder: "Available?" %>
+        <br>
+        <%= f.label :price %>
+        <%= f.text_field :price,  placeholder: "Price" %>
+        <br>
+        <%= f.label :capacity %>
+        <%= f.text_field :capacity,  placeholder: "Capacity" %>
+        <br>
+        <%= f.label :description %>   
+        <%= f.text_area :description,  placeholder: "Description" %>
+        <br>
+        <%= f.label :photo %>
+        <%= f.file_field :photo %>
+        <br>
+        <%= f.submit %>
+    <% end %>
+</div>

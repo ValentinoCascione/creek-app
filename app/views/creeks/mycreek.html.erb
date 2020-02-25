@@ -1,1 +1,11 @@
-<%= @creek.title %>
+<div class="unique-card">
+    <%= cl_image_tag @creek.photo.key, width: 400, height: 300, crop: :fill if @creek.photo.attached? %>
+    <h1><%= @creek.title %></h1>
+    <h3><%= @creek.country %></h3>
+    <h3><%= @creek.city %></h3>
+    <h4><%= @creek.price %></h4>
+    <p><%= @creek.description %></p>
+    <h3><%= @creek.capacity %></h3>
+</div>
+
+<%= link_to 'Back', mycreeks_path %>

@@ -6,10 +6,8 @@ class BookingsController < ApplicationController
         @booking = Booking.new
         @booking.user_id = current_user.id
         @booking.creek_id = @creek.id
-        if @booking.save
+        if @booking.save!
           redirect_to creek_bookings_path
-        else
-          render :new
         end
     end
 
@@ -20,6 +18,6 @@ class BookingsController < ApplicationController
     def destroy
         @booking = Booking.find(params[:id])
         @booking.destroy
-        redirect_to '/'
+        redirect_to creek_bookings_path(current_user.id)
     end
 end

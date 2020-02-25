@@ -1,4 +1,12 @@
-<%= @creek.title %>
+<h1>Details of the <%= @creek.title %></h1>
+<div class="unique-card">
+    <%= cl_image_tag @creek.photo.key, width: 400, height: 300, crop: :fill if @creek.photo.attached? %>
+    <h3 class="city"><%= @creek.city %></h3>
+    <h3 class="country"><%= @creek.country %></h3>
+    <h4 class="price"><%= @creek.price %>€/day</h4>
+    <p class="description"><%= @creek.description %></p>
+    <h3 class="available"><%= @creek.available %></h3>
+    <h3 class="capacity"><%= @creek.capacity %></h3>
+</div>
+
 <%= link_to "Book !", creek_bookings_path(@creek), method: :post %>
-<br>
-<%= cl_image_tag @creek.photo.key, height: 300, width: 400, crop: :fill %>
