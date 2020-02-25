@@ -1,7 +1,9 @@
 <h1>Creeks</h1>
 
 <% @creeks.each do |creek| %>
-    <p><%= creek.title %></p>
-    <p><%= creek.id %></p>
-    <%= link_to "Show", creek_path(creek) %>
+    <div class="card">
+        <p class="title"><%= creek.title %></p>
+        <p class="city"><%= creek.city %></p>
+        <%= link_to "Show", creek_path(creek) %>
+    </div>
 <% end %>
