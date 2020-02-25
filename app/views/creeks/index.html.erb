@@ -1,0 +1,7 @@
+<h1>Creeks</h1>
+
+<% @creeks.each do |creek| %>
+    <p><%= creek.title %></p>
+    <p><%= creek.id %></p>
+    <%= link_to "Show", creek_path(creek) %>
+<% end %>
