@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+@import "bookings";
+@import "config/fonts";
+
+.container {
+    margin: 40px;
+    font-family: $body-font;
+}

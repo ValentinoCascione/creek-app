@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>CreekApp</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<head>
+  <title>CreekApp</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-  <body>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <% if user_signed_in? %>
+<body>
+  <div class="container">
+    <% if user_signed_in? %>
     <%= render 'layouts/header_co' %>
-  <% else %>
+    <% else %>
     <%= render 'layouts/header_deco' %>
-  <% end %>
+    <% end %>
     <%= yield %>
-    
-  </body>
+  </div>
+</body>
+
 </html>
