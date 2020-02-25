@@ -1,2 +1,4 @@
 <%= @creek.title %>
 <%= link_to "Book !", creek_bookings_path(@creek), method: :post %>
+<br>
+<%= cl_image_tag @creek.photo.key, height: 300, width: 400, crop: :fill %>
