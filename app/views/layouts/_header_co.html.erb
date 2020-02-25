@@ -1,8 +1,10 @@
 <header>
+    <input type="text" placeholder="Search ..." id="search-bar">
     <nav>
         <ul>
             <li>Reservation</li>
             <li><%= link_to "My creeks", mycreeks_path %></li>
+            <li><%= link_to "My profile", edit_user_registration_path %></li>
             <li><%= link_to "Disconnect", destroy_user_session_path, method: :delete %></li>
         </ul>
     </nav>
