@@ -15,3 +15,16 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+const city = document.querySelectorAll('.city');
+const searchBar = document.querySelector('#search-bar');
+
+searchBar.addEventListener('keyup', (e) => {
+    city.forEach((el) => {
+        if (el.innerHTML.toUpperCase().startsWith(searchBar.value.toUpperCase())) {
+            el.parentNode.style.display = "";
+        } else {
+            el.parentNode.style.display = "none";
+        }
+    })
+});
