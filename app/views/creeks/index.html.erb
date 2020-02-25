@@ -2,8 +2,11 @@
 
 <% @creeks.each do |creek| %>
     <div class="card">
+        <%= cl_image_tag creek.photo.key, width: 400, height: 300, crop: :fill if creek.photo.attached? %>
         <p class="title"><%= creek.title %></p>
         <p class="city"><%= creek.city %></p>
+        <p class="country"><%= creek.country %></p>
+        <p class="price"><%= creek.price %>€/day</p>
         <%= link_to "Show", creek_path(creek) %>
     </div>
 <% end %>

@@ -4,6 +4,10 @@
     <%= f.text_field :title %>
     <%= f.text_field :country %>
     <%= f.text_field :city %>
-    <%= f.file_field :image, direct_upload: true, class: "form-control" %>
+    <%= f.check_box :available %>
+    <%= f.text_field :price %>
+    <%= f.text_field :capacity %>
+    <%= f.text_area :description %>
+    <%= f.file_field :photo %>
     <%= f.submit %>
 <% end %>
