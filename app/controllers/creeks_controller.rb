@@ -40,9 +40,9 @@ class CreeksController < ApplicationController
 
   def create
     @user = current_user
-    @creek = Creek.new(params.require(:creek).permit(:title, :country, :city))
+    @creek = Creek.new(params.require(:creek).permit(:title, :country, :city, :price, :description, :capacity, :photo))
     @creek.user_id = @user.id
-    if @creek.save
+    if @creek.save!
       redirect_to mycreeks_path
     else
       render :new
@@ -56,7 +56,7 @@ class CreeksController < ApplicationController
   def update
     @creek = Creek.find(params[:id])
     if @creek.user_id == current_user.id
-      @creek.update(params.require(:creek).permit(:title, :country, :city, :available))
+      @creek.update(params.require(:creek).permit(:title, :country, :city, :available, :price, :description, :capacity, :photo))
     end
     redirect_to mycreeks_path
   end
