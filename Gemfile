@@ -59,3 +59,6 @@ gem 'devise'
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.12.0'
+gem 'bootstrap', '~> 4.3.1'
+gem 'autoprefixer-rails'
+gem 'font-awesome-sass', '~> 5.6.1'

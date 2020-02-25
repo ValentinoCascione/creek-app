@@ -28,3 +28,5 @@ searchBar.addEventListener('keyup', (e) => {
         }
     })
 });
+
+import 'bootstrap';
