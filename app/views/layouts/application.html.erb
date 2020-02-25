@@ -16,7 +16,10 @@
     <%= render 'layouts/header_deco' %>
   <% end %>
     <%= yield %>
-    
+
+<!-- Test image Cloudinary -->
+  <%= cl_image_tag("uodarehx7xs9zc4l9pbf", width: 400, height: 300, crop: :fill) %>
+
   </body>
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 </html>
