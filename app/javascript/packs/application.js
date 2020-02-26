@@ -29,4 +29,17 @@ searchBar.addEventListener('keyup', (e) => {
     })
 });
 
-import 'bootstrap';
+// import 'bootstrap';
+
+const isAvailable = document.querySelector('.details-singlecard .available');
+const btnBook = document.querySelector('.book');
+if (isAvailable.innerHTML === 'Not available') {
+    btnBook.classList.add('pointer')
+}
+
+
+// isAvailable.addEventListener('click', (event) => {
+//     console.log(isAvailable.innerHTML)
+// })
+// si available = false
+// alors on rajoute une classe "pointer" pour disable

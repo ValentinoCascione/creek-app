@@ -21,3 +21,13 @@
     display: flex;
     justify-content: center;
 }
+
+.red {
+    color: red;
+    border-color: red;
+}
+
+.red:hover {
+background-color: red;
+color: white;
+}
