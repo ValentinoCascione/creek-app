@@ -30,9 +30,9 @@ header {
     font-size: 140%;
 }
 
-nav {
-    width: 40%;
-}
+// nav {
+//     width: 40%;
+// }
 
 nav ul{
     width: 100%;
@@ -49,6 +49,7 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #db7359;
+    margin: 10px;
 }
 
 nav a:hover {
