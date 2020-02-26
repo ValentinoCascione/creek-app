@@ -2,6 +2,13 @@ class CreeksController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
     @creeks = Creek.all
+    @creeks_coordinates = Creek.geocoded #return creeks with their coordinates
+    @markers = @creeks_coordinates.map do |creek|
+      {
+        lat: creek.latitude,
+        lng: creek.longitude
+      }
+    end
   end
 
   def show

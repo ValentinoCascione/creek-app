@@ -9,3 +9,12 @@ environment.plugins.prepend('Provide', new webpack.ProvidePlugin({
 )
 
 module.exports = environment
+
+const nodeModulesLoader = environment.loaders.get('nodeModules')
+if (!Array.isArray(nodeModulesLoader.exclude)) {
+  nodeModulesLoader.exclude = (nodeModulesLoader.exclude == null)
+    ? []
+    : [nodeModulesLoader.exclude]
+}
+nodeModulesLoader.exclude.push(/mapbox-gl/) // replace `some-library` with
+                                               // the actual path to exclude
