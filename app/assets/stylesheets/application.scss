@@ -6,6 +6,8 @@ html, body {
     margin: 0;
     font-family: $body-font;
     padding-bottom: 20px;
+    background-color: #F8F8F8;
+    color: #181818;
 }
 
 .container {
@@ -19,5 +21,5 @@ html, body {
     height: 100%;
     width: 100;
     // display: flex;
-    margin-top: 120px;
+    margin-top: 100px;
 }

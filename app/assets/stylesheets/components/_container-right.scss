@@ -1,5 +1,17 @@
 .container-right {
     height: 100%;
     width: 50%;
-    border: 1px solid black;
+    // border: 1px solid black;
+    position: fixed;
+    top: 90px;
+    right: 0;
+}
+
+#map {
+    border-radius: 5px;
+    margin-left: 30px;
+    }
+
+.mapboxgl-canvas {
+
 }

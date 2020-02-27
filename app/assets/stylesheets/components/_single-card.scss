@@ -15,7 +15,7 @@
 
 .unique-card img {
     height: 100%;
-    width: 60%;
+    width: 70%;
     object-fit: cover;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
@@ -64,4 +64,12 @@
     pointer-events: none;
     border-color: lightgrey;
     color: lightgrey;
+}
+
+h1 {
+    font-family: $headers-font;
+}
+
+.details-singlecard h4, h3, p {
+    font-family: $body-font;
 }

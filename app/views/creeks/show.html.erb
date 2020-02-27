@@ -1,5 +1,5 @@
 <div class="show-container">
-    <h1>Details of the <%= @creek.title %></h1>
+    <h1>Details of <%= @creek.title %></h1>
     <div class="unique-card" style="margin-bottom: 20px;">
         <%= cl_image_tag @creek.photo.key, width: 400, height: 300, crop: :fill if @creek.photo.attached? %>
         <div class="details-singlecard">
@@ -20,5 +20,5 @@
             <% end %>
         </div>
     </div>
-    <%= link_to 'Back', '/', class: 'btn' %>
+    <%= link_to 'Back', '/', class: 'btn btn-back' %>
 </div>
