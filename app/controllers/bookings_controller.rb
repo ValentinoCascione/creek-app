@@ -13,10 +13,18 @@ class BookingsController < ApplicationController
 
     def index
         @bookings = current_user.bookings
+        @creeks = Creek.joins(:bookings)
         @user = current_user.id
-        #IL FAUT CREER LA LISTE DE CREEKS
+
         # For geocoding
-      #--- end
+          @creeks_coordinates = Creek.geocoded.joins(:bookings) #return creeks with their coordinates
+          @markers = @creeks_coordinates.map do |creek|
+            {
+              lat: creek.latitude,
+              lng: creek.longitude
+            }
+          end
+        #--- end
     end
 
     def destroy
