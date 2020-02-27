@@ -21,9 +21,9 @@ const searchBar = document.querySelector('#search-bar');
 searchBar.addEventListener('keyup', (e) => {
     city.forEach((el) => {
         if (el.innerHTML.toUpperCase().startsWith(searchBar.value.toUpperCase())) {
-            el.parentNode.style.display = "";
+            el.parentNode.parentNode.parentNode.style.display = "";
         } else {
-            el.parentNode.style.display = "none";
+            el.parentNode.parentNode.parentNode.style.display = "none";
         }
     })
 });
