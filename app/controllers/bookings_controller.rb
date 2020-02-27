@@ -21,7 +21,8 @@ class BookingsController < ApplicationController
           @markers = @creeks_coordinates.map do |creek|
             {
               lat: creek.latitude,
-              lng: creek.longitude
+              lng: creek.longitude,
+              image_url: helpers.asset_url('palm-marker.png')
             }
           end
         #--- end
