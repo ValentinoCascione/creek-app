@@ -7,8 +7,7 @@
     <title>CreekApp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700&display=swap" rel="stylesheet"> 
+    <%= stylesheet_link_tag 'application', media: 'all' %>
   </head>
 
 <body>
@@ -17,7 +16,7 @@
     <% else %>
     <%= render 'layouts/header_deco' %>
     <% end %>
-    
+
     <div class="container">
       <div class="containers">
           <%= yield %>
