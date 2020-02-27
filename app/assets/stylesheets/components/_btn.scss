@@ -31,3 +31,41 @@
 background-color: red;
 color: white;
 }
+
+.display-btns {
+    display: flex;
+    justify-content: space-around;
+}
+
+.green {
+    color: lightseagreen;
+    border-color: lightseagreen;
+    padding: 8px;
+}
+
+.green:hover {
+background-color: lightseagreen;
+color: white;
+}
+
+.pink {
+    color: lightpink;
+    border-color: lightpink;
+    padding: 8px;
+}
+
+.pink:hover {
+background-color: lightpink;
+color: white;
+}
+
+.red-two {
+    color: red;
+    border-color: red;
+    padding: 8px;
+}
+
+.red-two:hover {
+background-color: red;
+color: white;
+}

@@ -4,7 +4,6 @@
 // that code so it'll be compiled.
 
 require("@rails/ujs").start()
-require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 
@@ -31,11 +30,11 @@ searchBar.addEventListener('keyup', (e) => {
 
 // import 'bootstrap';
 
-const isAvailable = document.querySelector('.details-singlecard .available');
-const btnBook = document.querySelector('.book');
-if (isAvailable.innerHTML === 'Not available') {
-    btnBook.classList.add('pointer')
-}
+// const isAvailable = document.querySelector('.details-singlecard .available');
+// const btnBook = document.querySelector('.book');
+// if (isAvailable.innerHTML === 'Not available') {
+//     btnBook.classList.add('pointer')
+// }
 
 
 // isAvailable.addEventListener('click', (event) => {

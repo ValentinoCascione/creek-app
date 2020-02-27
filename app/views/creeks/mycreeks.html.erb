@@ -1,12 +1,39 @@
 <h1>My hosting Creeks</h1>
 
 
-<% @creeks.each do |creek| %>
+<!-- <% @creeks.each do |creek| %>
     <h2><%= creek.title %></h2>
     <p><%= link_to "Show my creek", mycreek_path(creek) %></p>
     <p><%= link_to "Edit my creek", edit_creek_path(creek) %></p>
     <p><%= link_to "Delete my creek", creek_path(creek), method: :delete, data: {confirm: 'Are you really really sure?'} %></p>
 <% end %>
 
-<p><%= link_to "Add a new hosting creek", new_creek_path %></p>
+<p><%= link_to "Add a new hosting creek", new_creek_path %></p> -->
 
+<div class="whole-container">
+    <div class="container-left">
+        <p><%= link_to "Add a new hosting creek", new_creek_path, class: 'btn' %></p>
+        <div class="cards">
+            <% @creeks.each do |creek| %>
+                <div class="card">
+                    <%= cl_image_tag creek.photo.key if creek.photo.attached? %>
+                    <div class="details">
+                        <h2 class="title"><%= creek.title %></h2>
+                        <div class="localisation">
+                            <h3 class="city"><%= creek.city %>, &nbsp</h3>
+                            <h3 class="country"><%= creek.country %></h3>
+                        </div>
+                        <h4 class="price"><%= creek.price %>€/day</h4>
+                        <div class="big-btn display-btns">
+                            <p><%= link_to "Show", mycreek_path(creek), class: 'btn pink' %></p>
+                            <p><%= link_to "Edit", edit_creek_path(creek), class: 'btn green' %></p>
+                            <p><%= link_to "Delete", creek_path(creek), method: :delete, data: {confirm: 'Are you really really sure?'}, class: 'btn red-two' %></p>
+                        </div>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+    </div>
+
+    <div class="container-right">Ceci sera la map</div>
+</div>

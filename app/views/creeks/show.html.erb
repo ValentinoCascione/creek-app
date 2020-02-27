@@ -1,6 +1,6 @@
 <div class="show-container">
     <h1>Details of the <%= @creek.title %></h1>
-    <div class="unique-card">
+    <div class="unique-card" style="margin-bottom: 20px;">
         <%= cl_image_tag @creek.photo.key, width: 400, height: 300, crop: :fill if @creek.photo.attached? %>
         <div class="details-singlecard">
             <h4 class="price"><%= @creek.price %>€/day</h4>
@@ -10,14 +10,15 @@
                 <h3 class="city"><%= @creek.city %>, &nbsp;</h3>
                 <h3 class="country"><%= @creek.country %></h3>
             </div>
+            <h3 class="capacity"><span>Capacity: </span><%= @creek.capacity %> persons</h3>
             <% if @creek.available %>
             <h3 class="available">Available</h3>
+            <%= link_to "Book !", creek_bookings_path(@creek), method: :post, class: "btn book" %>
             <% else %>
             <h3 class="available">Not available</h3>
+            <%= link_to "Book !", creek_bookings_path(@creek), method: :post, class: "btn book pointer" %>
             <% end %>
-            <h3 class="capacity"><span>Capacity: </span><%= @creek.capacity %> persons</h3>
-            <%= link_to "Book !", creek_bookings_path(@creek), method: :post, class: "btn book" %>
         </div>
     </div>
-
+    <%= link_to 'Back', '/', class: 'btn' %>
 </div>
