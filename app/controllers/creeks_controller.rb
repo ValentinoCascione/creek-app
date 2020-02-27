@@ -2,13 +2,15 @@ class CreeksController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
     @creeks = Creek.all
-    @creeks_coordinates = Creek.geocoded #return creeks with their coordinates
-    @markers = @creeks_coordinates.map do |creek|
-      {
-        lat: creek.latitude,
-        lng: creek.longitude
-      }
-    end
+    # For geocoding
+      @creeks_coordinates = Creek.geocoded #return creeks with their coordinates
+      @markers = @creeks_coordinates.map do |creek|
+        {
+          lat: creek.latitude,
+          lng: creek.longitude
+        }
+      end
+    #--- end
   end
 
   def show
@@ -19,6 +21,15 @@ class CreeksController < ApplicationController
     if user_signed_in?
       @user = current_user.id
       @creeks = Creek.all.where(user_id: @user)
+      # For geocoding
+        @creeks_coordinates = Creek.geocoded.where(user_id: @user) #return creeks with their coordinates
+        @markers = @creeks_coordinates.map do |creek|
+          {
+            lat: creek.latitude,
+            lng: creek.longitude
+          }
+        end
+      #--- end
     else
       redirect_to '/'
     end

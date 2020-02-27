@@ -1,15 +1,5 @@
 <h1>My hosting Creeks</h1>
 
-
-<!-- <% @creeks.each do |creek| %>
-    <h2><%= creek.title %></h2>
-    <p><%= link_to "Show my creek", mycreek_path(creek) %></p>
-    <p><%= link_to "Edit my creek", edit_creek_path(creek) %></p>
-    <p><%= link_to "Delete my creek", creek_path(creek), method: :delete, data: {confirm: 'Are you really really sure?'} %></p>
-<% end %>
-
-<p><%= link_to "Add a new hosting creek", new_creek_path %></p> -->
-
 <div class="whole-container">
     <div class="container-left">
         <p><%= link_to "Add a new hosting creek", new_creek_path, class: 'btn' %></p>
@@ -35,5 +25,10 @@
         </div>
     </div>
 
-    <div class="container-right">Ceci sera la map</div>
+    <div class="container-right">
+      <div
+        id="map" style="width: 100%; height: 600px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+      </div>
+    </div>
+  
 </div>

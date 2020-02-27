@@ -13,6 +13,10 @@ class BookingsController < ApplicationController
 
     def index
         @bookings = current_user.bookings
+        @user = current_user.id
+        #IL FAUT CREER LA LISTE DE CREEKS
+        # For geocoding
+      #--- end
     end
 
     def destroy
