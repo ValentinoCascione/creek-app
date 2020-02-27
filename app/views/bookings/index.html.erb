@@ -1,9 +1,35 @@
-<h1>Book a creek</h1>
+<h1>Booked creeks</h1>
 
-<% @bookings.each do |mybook| %>
+<!-- <% @bookings.each do |mybook| %>
     <p><%= mybook.creek.title %></p>
     <p><%= mybook.creek.country %></p>
     <p><%= mybook.creek.city %></p>
     <p><%= mybook.creek.price %>€/day</p>
-    <%= link_to "Delete this book", booking_path(mybook), method: :delete %>
-<% end %>
+    <% end %>
+     -->
+    
+    
+    <div class="whole-container">
+        <div class="container-left">
+            <div class="cards">
+                <% @bookings.each do |mybook| %>
+                <div class="card">
+                    <%= cl_image_tag mybook.creek.photo.key if mybook.creek.photo.attached? %>
+                    <div class="details">
+                        <h2 class="title"><%= mybook.creek.title %></h2>
+                        <div class="localisation">
+                            <h3 class="city"><%= mybook.creek.city %>, &nbsp</h3>
+                            <h3 class="country"><%= mybook.creek.country %></h3>
+                        </div>
+                        <h4 class="price"><%= mybook.creek.price %>€/day</h4>
+                        <div class="big-btn">
+                            <%= link_to "Delete this book", booking_path(mybook), method: :delete, class: 'btn red' %>
+                        </div>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+    </div>
+
+    <div class="container-right">Ceci sera la map</div>
+</div>

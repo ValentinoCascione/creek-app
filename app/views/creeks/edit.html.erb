@@ -13,11 +13,11 @@
         <%= f.label :available? %>
         <%= f.check_box :available %>
         <br>
-        <%= f.label :photo %>
+        <%= f.label :photo, class: 'label-photo btn', input_html: {value: 'abc'}, as: :text %>
         <%= f.file_field :photo %>
         <br>
-        <%= f.submit %>
+        <%= f.submit 'Create', class: 'btn green' %>
     <% end %>
 </div>
 
-<%= link_to 'Back', mycreeks_path %>
+<%= link_to 'Back', mycreeks_path, class: 'btn' %>
