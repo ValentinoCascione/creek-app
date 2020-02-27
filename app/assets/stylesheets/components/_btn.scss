@@ -9,6 +9,7 @@
     display: flex;
     justify-content: center;
     text-align: center;
+    font-family: $headers-font;
 }
 
 .btn:hover {
@@ -60,12 +61,19 @@ color: white;
 }
 
 .red-two {
-    color: red;
-    border-color: red;
+    color: #ff5e4d;
+    border-color: #ff5e4d;
     padding: 8px;
 }
 
 .red-two:hover {
-background-color: red;
+background-color: #ff5e4d;
 color: white;
+}
+
+.btn-back {
+    width: 10%;
+    position: absolute;
+    bottom: 55px;
+    right: 55px;
 }
