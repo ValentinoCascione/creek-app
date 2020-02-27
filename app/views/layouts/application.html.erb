@@ -7,7 +7,8 @@
     <title>CreekApp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
 
 <body>
@@ -20,9 +21,9 @@
     <div class="container">
       <div class="containers">
           <%= yield %>
+             <!-- from app/javascript/packs/application.js -->
       </div>
     </div>
-
+  <%= javascript_pack_tag "application" %> 
   </body>
-  <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
 </html>

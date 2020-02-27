@@ -5,4 +5,8 @@ class Creek < ApplicationRecord
 
   validates :title, :country, :city, :price, :description, :capacity, presence: true
   validates :title,  uniqueness: true
+
+  # Added for geocoding (=> address calculated based on 'city' field)
+  geocoded_by :city
+  after_validation :geocode, if: :will_save_change_to_city?
 end
