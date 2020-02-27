@@ -1,10 +1,16 @@
+h2 {
+  padding-top: 30px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
 form {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: center;
     margin-bottom: 20px;
     text-align: center;
+    color: #181818;
 }
 
 form input {
@@ -13,10 +19,13 @@ form input {
     border-bottom: 1px solid grey;
     font-size: 25px;
     margin: 10px;
+    text-align: center;
+    font-style: italic;
 }
 
 form label {
-    font-size: 30px;
+    font-size: 20px;
+    color: grey;
 }
 
 
@@ -31,3 +40,115 @@ input[type="file"] {
   input[type="submit"] {
     width: 150px;
   }
+
+
+  .field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .field .label {
+    border: 1px solid black;
+  }
+
+  .field .input {
+    border: 1px solid black;
+  }
+
+  .edit-password {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .edit-password #user_password {
+    margin-top: 15px;
+    margin-bottom: 0;
+    margin-left: 30px;
+  }
+
+  #user_current_password {
+    margin-bottom: 0;
+    margin-top: 15px;
+    margin-left: 30px;
+  }
+
+  .current-password {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #user_pseudo {
+    margin-left: 30px;
+  }
+
+  #user_email {
+    margin-left: 30px;
+  }
+
+  #user_password_confirmation {
+    margin-left: 30px;
+  }
+
+  .actions {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .cancel-account {
+    border-top: 1px solid lightgrey;
+  }
+
+  .my-form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .cancel-account h3 {
+    font-size: 15px;
+    font-family: $body-font;
+  }
+   .cancel-account .btn-cancel {
+    margin: 50px 0;
+    font-size: 10px;
+    text-decoration: none;
+    border: 1px solid grey;
+    text-align: left;
+    padding: 8px 24px;
+    border-radius: 40px;
+   }
+
+   .btn-cancel:hover {
+     color: white;
+     background-color: grey;
+   }
+
+   .actions .btn {
+     margin-bottom: 25px;
+   }
+
+   .containers .links {
+     font-family: $body-font;
+     text-decoration: none;
+     color: grey;
+   }
+
+   .links:hover {
+     color: #383838;
+   }
+
+   .forgotten-password {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+
+   #new-user .field {
+     text-align: center;
+   }
+
+   .actions .password .btn {
+     font-size: 15px;
+   }
