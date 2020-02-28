@@ -62,12 +62,7 @@ class CreeksController < ApplicationController
     @user = current_user
     @creek = Creek.new(params.require(:creek).permit(:title, :available, :country, :city, :price, :description, :capacity, :photo))
     @creek.user_id = @user.id
-    # if @creek.available == ""
-    #   @creek.available = false
-    # else 
-    #   @creek.available = true
-    # end
-    if @creek.save!
+    if @creek.save
       redirect_to mycreeks_path
     else
       render :new
