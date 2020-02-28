@@ -24,6 +24,10 @@ html, body {
     margin-top: 100px;
 }
 
+input:focus {
+    outline: none;
+}
+
 .containers h1 {
     margin-top: 90px;
 }
