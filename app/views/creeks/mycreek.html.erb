@@ -13,7 +13,9 @@
 <div class="show-container">
     <h1>Details of the <%= @creek.title %></h1>
     <div class="unique-card" style="margin-bottom: 20px;">
-        <%= cl_image_tag @creek.photo.key, width: 400, height: 300, crop: :fill if @creek.photo.attached? %>
+        <div class="width-img">
+            <%= cl_image_tag @creek.photo.key if @creek.photo.attached? %>
+        </div>
         <div class="details-singlecard">
             <h4 class="price"><%= @creek.price %>€/day</h4>
             

@@ -13,7 +13,9 @@
             <div class="cards">
                 <% @bookings.each do |mybook| %>
                 <div class="card">
-                    <%= cl_image_tag mybook.creek.photo.key if mybook.creek.photo.attached? %>
+                    <div class="width-img">
+                        <%= cl_image_tag mybook.creek.photo.key if mybook.creek.photo.attached? %>
+                    </div>
                     <div class="details">
                         <h2 class="title"><%= mybook.creek.title %></h2>
                         <div class="localisation">
