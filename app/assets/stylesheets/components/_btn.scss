@@ -11,6 +11,7 @@
     text-align: center;
     font-family: $headers-font;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .btn:hover {
@@ -40,24 +41,24 @@ color: white;
 }
 
 .green {
-    color: lightseagreen;
-    border-color: lightseagreen;
+    color: #189992;
+    border-color: #189992;
     padding: 8px;
 }
 
 .green:hover {
-background-color: lightseagreen;
+background-color: #189992;
 color: white;
 }
 
 .pink {
-    color: lightpink;
-    border-color: lightpink;
+    color: #F2B42C;
+    border-color: #F2B42C;
     padding: 8px;
 }
 
 .pink:hover {
-background-color: lightpink;
+background-color: #F2B42C;
 color: white;
 }
 
@@ -75,6 +76,10 @@ color: white;
 .btn-back {
     width: 10%;
     position: absolute;
-    bottom: 55px;
+    bottom: 30px;
     right: 55px;
+}
+
+.btn-add-creek{
+    width: 50%;
 }
