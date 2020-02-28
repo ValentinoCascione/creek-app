@@ -3,7 +3,7 @@ class Creek < ApplicationRecord
   has_many :bookings
   has_one_attached :photo
 
-  validates :title, :country, :city, :price, :description, :capacity, presence: true
+  validates :title, :country, :city, :price, :description, :capacity, :photo, presence: true
   validates :title,  uniqueness: true
 
   # Added for geocoding (=> address calculated based on 'city' field)
