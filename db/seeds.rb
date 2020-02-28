@@ -8,12 +8,36 @@
 require "open-uri"
 
 puts "Need to have already 2 accounts for 2 differents beach owners: user_id 1 (France) and user_id 2 (Foreign)"
-puts "Reset Bookings and Creeks..."
-Booking.destroy_all
-Creek.destroy_all
-puts "Done!"
+puts "Step 1/2: Reset users, bookings and creeks tables..."
 
-puts "Creates 16 beaches ..."
+Booking.destroy_all
+ActiveRecord::Base.connection.reset_pk_sequence!('bookings')
+Creek.destroy_all
+ActiveRecord::Base.connection.reset_pk_sequence!('creeks')
+User.destroy_all
+ActiveRecord::Base.connection.reset_pk_sequence!('users')
+
+puts "Step 1: Done !"
+
+puts "Step 2/2: Creates 2 users and 16 beaches ..."
+
+user1 = User.new(
+  email: "user1@gmail.com",
+  pseudo: "Valentino",
+  password: "123456")
+user1.save!
+
+user2 = User.new(
+  email: "user2@gmail.com",
+  pseudo: "Lucie",
+  password: "123456")
+user2.save!
+
+user3 = User.new(
+  email: "user3@gmail.com",
+  pseudo: "Aurelien",
+  password: "123456")
+user3.save!
 
 file = URI.open("https://res.cloudinary.com/dtgr3qmw9/image/upload/v1582895251/beach-1_crkcsk.jpg")
 creek1 = Creek.new(
@@ -291,4 +315,4 @@ creek16.save!
 # creek1.photo.attach(io: file, filename: 'beach-1.jpg', content_type: 'image/jpg')
 # creek1.save!
 
-puts "Done !"
+puts "Step 2/2: Done !"
