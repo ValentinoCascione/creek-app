@@ -7,7 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require "open-uri"
 
-puts "Need to have already 2 accounts for 2 differents beach owners: user_id 1 (France) and user_id 2 (Foreign)"
 puts "Step 1/2: Reset users, bookings and creeks tables..."
 
 Booking.destroy_all
